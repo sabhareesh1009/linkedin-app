@@ -1,12 +1,12 @@
 import React from "react";
 import "./Widgets.css";
 import InfoIcon from "@material-ui/icons/Info";
-import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import FiberManualRecordOutlinedIcon from "@material-ui/icons/FiberManualRecordOutlined";
 function Widgets() {
   const newsArticle = (heading, subtitle) => (
     <div className="widgets__article">
       <div className="widgets__articleLeft">
-        <FiberManualRecordIcon />
+        <FiberManualRecordOutlinedIcon />
       </div>
 
       <div className="widgets__articleRight">
@@ -22,8 +22,18 @@ function Widgets() {
         <h2> LinkedIn News</h2>
         <InfoIcon />
       </div>
-
-      {newsArticle("Here Js always rocks", "Top 789")}
+      {newsArticle(
+        "India Prepare for Omricon varient",
+        "Top news . 5,999 readers"
+      )}
+      {newsArticle("How to be more productive", "2d ago . 9,999 readers")}
+      {newsArticle("Software Engineering is crazy!!", "3d ago . 2,599 readers")}
+      {newsArticle(
+        "Bid adiue to distraction at work",
+        "3d ago . 4,111 readers"
+      )}
+      {newsArticle("Acing career switch", "2d ago . 5,345 readers")}
+      {newsArticle("What's Next for crypto in india", "9d ago . 5,190 readers")}
     </div>
   );
 }

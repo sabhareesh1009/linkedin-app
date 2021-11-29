@@ -4,8 +4,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "./features/counter/userSlice";
 import "./Sidebar.css";
 function Sidebar() {
-
-const user = useSelector(selectUser);
+  const user = useSelector(selectUser);
 
   const recentItem = (topic) => {
     return (
@@ -22,7 +21,9 @@ const user = useSelector(selectUser);
           src="https://images.unsplash.com/photo-1638014339583-dc1a03690de3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
           alt=""
         />
-        <Avatar src={user.photoUrl} className="sidebar__avatar">{user.email[0]}</Avatar>
+        <Avatar src={user.photoUrl} className="sidebar__avatar">
+          {user.email[0]}
+        </Avatar>
         <h2>{user.displayName}</h2>
         <h4>{user.email}</h4>
       </div>
@@ -41,10 +42,15 @@ const user = useSelector(selectUser);
       <div className="sidebar__bottom">
         <p>Recent</p>
         {recentItem("react.js")}
+        {recentItem("redux")}
+        {recentItem("firebase")}
+        {recentItem("javascript")}
+        {recentItem("typescript")}
+        {recentItem("datastructures")}
+        {recentItem("algorithms")}
         {recentItem("programming")}
         {recentItem("softwareengineering")}
         {recentItem("design")}
-        {recentItem("developer")}
         {recentItem("webdeveloper")}
       </div>
     </div>

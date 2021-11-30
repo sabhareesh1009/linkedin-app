@@ -39,8 +39,10 @@ function Feed() {
       message: input,
       photoUrl: user.photoUrl || "",
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    })
+    .catch((error) => {
+      alert(error);
     });
-
     setInput("");
   };
 

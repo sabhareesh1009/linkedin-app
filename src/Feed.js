@@ -33,16 +33,17 @@ function Feed() {
 
   const sendPost = (e) => {
     e.preventDefault();
-    db.collection("posts").add({
-      name: user.displayName,
-      description: user.email,
-      message: input,
-      photoUrl: user.photoUrl || "",
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    })
-    .catch((error) => {
-      alert(error);
-    });
+    db.collection("posts")
+      .add({
+        name: user.displayName,
+        description: user.email,
+        message: input,
+        photoUrl: user.photoUrl || "",
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      })
+      .catch((error) => {
+        alert(error);
+      });
     setInput("");
   };
 
